@@ -1,4 +1,4 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   module: {
@@ -7,7 +7,7 @@ module.exports = {
         test: /\.ts(x?)$/,
         use: [
           {
-            loader: "ts-loader",
+            loader: 'ts-loader',
             options: {
               transpileOnly: true,
             },
@@ -17,10 +17,10 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".js", ".ts", ".tsx"],
+    extensions: ['.js', '.ts', '.tsx'],
   },
-  plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
+  plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
   devServer: {
     historyApiFallback: true,
   },
-};
+}
